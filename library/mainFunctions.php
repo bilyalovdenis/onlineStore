@@ -6,7 +6,6 @@ function loadPage($smarty, $controllerName, $actionName = 'index'){
     }
 
 function loadTemplate($smarty, $templateName){
-
     $smarty->display(TemplatePrefix.$templateName.TemplatePostfix);
 }
 

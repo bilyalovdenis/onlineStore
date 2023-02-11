@@ -1,0 +1,34 @@
+CREATE TABLE cart_item(
+	id int primary key not null auto_increment,
+	session_id int not null,
+	product_id int not null,
+	quantity int not null default(0) 
+);
+
+Foreign key(user_id) references user(id) 
+	[on delete {cascade}]
+	[on update {cascade}]
+
+
+
+
+
+
+
+
+alter table cart_item
+	add foreign key (product_id)
+	references product (id);
+
+
+use INFORMATION_SCHEMA;
+select 
+  TABLE_NAME,COLUMN_NAME,CONSTRAINT_NAME,REFERENCED_TABLE_NAME,REFERENCED_COLUMN_NAME 
+from 
+  KEY_COLUMN_USAGE
+where 
+  TABLE_SCHEMA = "OnlineStore" 
+and 
+  TABLE_NAME = "shopping_session" 
+and 
+  REFERENCED_COLUMN_NAME is not NULL;

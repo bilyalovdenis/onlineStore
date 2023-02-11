@@ -12,7 +12,7 @@ function indexAction($smarty){
     // $smarty->assign('category',"$info[category]");
     // $smarty->assign('photo',"$info[photo]");
     //$info = getProductInformation();
-    $smarty->assign('name',"name]");
+    $smarty->assign('name',"ntestame]");
     $smarty->assign('description',"description]");
     $smarty->assign('price',"price]");
     $smarty->assign('category',"category]");

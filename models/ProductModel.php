@@ -1,15 +1,11 @@
 <?php
 
-function getProductInformation(){
-    $connect = new mysqli('localhost', 'root', 'L1t2y3b4c5!', 'OnlineStore');
-    // $stmt = $connect->prepare ("SELECT * FROM product
-    //                             WHERE id = 1");
-    //                              $stmt->execute();
-    //                              $stmt->bind_result($result);
-    //                              $stmt->fetch();
-    $sql = "SELECT * FROM product WHERE id = 1";
-    $result = $connect->query($sql);
-    $res = mysqli_fetch_assoc($result);
+function getProductById($itemId){
+    $db_config = get_db_congig();
+    $connect = new mysqli($db_config["db_host"], $db_config["db_user"],
+                          $db_config["db_pass"], $db_config["db_name"]);
+    $sql = "SELECT * FROM product WHERE id =?";
+    $res = prepared_query($connect, $sql, [$itemId])->get_result()->fetch_assoc();
     $connect->close();
     return $res;                     
 }

@@ -25,3 +25,14 @@ $smarty->setCacheDir('tmp/smarty/cache');
 $smarty->setConfigDir('library/Smarty/lexer');
 
 $smarty->assign('templateWebPath', TemplateWebPath);
+
+// TODO Узнать, как сделать конфиги подключения к бд безопасным  
+
+function get_db_congig(){
+    return [
+        "db_name" => "OnlineStore",
+        "db_host" => "localhost",
+        "db_user" => "root",
+        "db_pass" => "L1t2y3b4c5!",
+    ];
+}

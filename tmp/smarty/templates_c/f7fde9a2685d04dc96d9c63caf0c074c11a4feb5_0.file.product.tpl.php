@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-02-09 16:31:14
+/* Smarty version 4.2.1, created on 2023-02-12 11:49:27
   from '/home/bloodyclaw/projects/online_store/views/default/product.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63e4f5a2e5ace1_00192000',
+  'unifunc' => 'content_63e8a817a8ba77_88810300',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f7fde9a2685d04dc96d9c63caf0c074c11a4feb5' => 
     array (
       0 => '/home/bloodyclaw/projects/online_store/views/default/product.tpl',
-      1 => 1675949454,
+      1 => 1676135227,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e4f5a2e5ace1_00192000 (Smarty_Internal_Template $_smarty_tpl) {
-?><html>
+function content_63e8a817a8ba77_88810300 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<html>
     <head>
         <title>StoreName</title>
         <meta charset="utf-8">

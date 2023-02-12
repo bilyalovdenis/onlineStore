@@ -6,8 +6,7 @@ function testAction(){
 }
 function indexAction($smarty){
     $itemId = isset($_GET['id']) ? $_GET['id'] : null;
-    if ($itemId = null) exit();
-
+    if ($itemId == null) exit();
     $info = getProductById($itemId);
     $smarty->assign('name',"$info[name]");
     $smarty->assign('description',"$info[description]");

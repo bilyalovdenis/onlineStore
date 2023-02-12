@@ -30,9 +30,9 @@ $smarty->assign('templateWebPath', TemplateWebPath);
 
 function get_db_congig(){
     return [
-        "db_name" => "",
-        "db_host" => "",
-        "db_user" => "",
-        "db_pass" => "",
+        "db_name" => "OnlineStore",
+        "db_host" => "localhost",
+        "db_user" => "root",
+        "db_pass" => "L1t2y3b4c5!", 
     ];
 }

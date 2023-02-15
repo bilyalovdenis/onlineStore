@@ -320,6 +320,7 @@ footer .footer-a-logo{
 }
 footer .logo-icon-svg{
     /* transform: translate(-1px,5px); */
+    
     background: url(../images/header-logo.svg);
     background-size: 60% auto;
     background-repeat: no-repeat;

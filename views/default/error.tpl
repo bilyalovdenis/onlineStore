@@ -3,7 +3,7 @@
     {include file='head.tpl'}
     <body>
         {include file='header.tpl'}
-        {$pageTitle}
+        <font color="red">{$error}</font>
         {include file='footer.tpl'}
     </body>
 </html> 

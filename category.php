@@ -1,7 +1,6 @@
-<?php 
+<?php
+
 include_once('config.php');
 include_once('library/mainFunctions.php');
 
-loadPage($smarty, 'Index', 'index');
-
-?>
+loadPage($smarty, 'Category', 'index');

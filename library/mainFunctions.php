@@ -12,7 +12,9 @@ function loadTemplate($smarty, $templateName){
 function prepared_query($my_sql, $sql, $params, $types = ""){
     $types = $types ?: str_repeat("s", count($params));
     $stmt = $my_sql->prepare($sql);
-    $stmt->bind_param($types, ...$params);
+    if($types != null){
+        $stmt->bind_param($types, ...$params);
+    }
     $stmt -> execute();
     return $stmt;
 }

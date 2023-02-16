@@ -1,34 +1,41 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-02-09 15:40:46
+/* Smarty version 4.2.1, created on 2023-02-16 12:17:02
   from '/home/bloodyclaw/projects/online_store/views/default/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63e4e9ce4fccf7_80321545',
+  'unifunc' => 'content_63edf48e13f153_82772963',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd44eb29f209bbdd7c088a45cac3245be432bed30' => 
     array (
       0 => '/home/bloodyclaw/projects/online_store/views/default/index.tpl',
-      1 => 1675946446,
+      1 => 1676539019,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:head.tpl' => 1,
+    'file:header.tpl' => 1,
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_63e4e9ce4fccf7_80321545 (Smarty_Internal_Template $_smarty_tpl) {
-?><html>
-    <head>
-        <title><?php echo $_smarty_tpl->tpl_vars['pageTitle']->value;?>
-</title>
-    </head>
+function content_63edf48e13f153_82772963 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<!DOCTYPE html>
+<html>
+    <?php $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
     <body>
-    <?php echo $_smarty_tpl->tpl_vars['pageTitle']->value;?>
+        <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+        <?php echo $_smarty_tpl->tpl_vars['pageTitle']->value;?>
 
+        <?php $_smarty_tpl->_subTemplateRender('file:footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
     </body>
-</html><?php }
+</html> <?php }
 }

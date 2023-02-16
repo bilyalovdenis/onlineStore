@@ -213,13 +213,23 @@ header .login-a{
 
 main {
     max-width: 1200px;
+    height: 100%;
     margin: 0 auto;
-    padding-bottom: 180px;
+    /* padding-bottom: 150px; */
 }
-main .container{
-    margin: 0;
-    padding: 0px 20px;
+main .container::after{
+    content: ".";
+    background-color: red;
+    display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
 }
+main .container{display: inline-block;}
+/* Hides from IE-mac \*/
+* html main .container { height: 1%;}
+main .container{display: block;}
+/* End hide from IE-mac */
 /* BreadCrumps */
 main .breadcrumps-list{
     padding: 0;
@@ -344,17 +354,16 @@ main .pay-button:active{
 }
 /* Footer */
 footer{
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
 
+    position: relative;
+    margin-top: -150px;
     width: 100%;
     height: 150px;
     
-    margin-top: 10px;
+
     font-family: Arial, Helvetica, sans-serif;
     background-color: #F0EFEF;
-
+clear: both;
 }
 footer .container{
     max-width: 1200px;

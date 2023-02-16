@@ -27,4 +27,8 @@ function getAllCategories(){
     $connect->close();
     return $res;        
 }
+
+function setProduct(){
+    
+}
 // Модель для работы с таблицей product

@@ -1,4 +1,5 @@
 <main>
+
 <h2 class="category-h2">{$products[0][4]}</h2>
 <ul class="category-clearfix">
 {foreach from=$products item=product}

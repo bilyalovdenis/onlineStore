@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-02-16 11:59:57
+/* Smarty version 4.2.1, created on 2023-02-18 20:22:13
   from '/home/bloodyclaw/projects/online_store/views/default/product.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63edf08d9a8d65_19772686',
+  'unifunc' => 'content_63f10945ca17e8_77917455',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f7fde9a2685d04dc96d9c63caf0c074c11a4feb5' => 
     array (
       0 => '/home/bloodyclaw/projects/online_store/views/default/product.tpl',
-      1 => 1676537995,
+      1 => 1676740923,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_63edf08d9a8d65_19772686 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63f10945ca17e8_77917455 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
     <?php $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

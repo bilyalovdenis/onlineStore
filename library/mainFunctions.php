@@ -26,3 +26,5 @@ function d ($value = null, $die=1){
     if ($die)
         die;
 }
+
+

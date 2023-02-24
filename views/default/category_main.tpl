@@ -1,6 +1,6 @@
 <main>
 
-<h2 class="category-h2">{$products[0][4]}</h2>
+<h2 class="category-h2">{$products[0]['category']}</h2>
 <ul class="category-clearfix">
 {foreach from=$products item=product}
     <li class="category-product_wrapper">

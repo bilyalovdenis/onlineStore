@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-02-16 15:04:30
+/* Smarty version 4.2.1, created on 2023-02-22 14:04:02
   from '/home/bloodyclaw/projects/online_store/views/default/product_main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63ee1bcec18c39_35510338',
+  'unifunc' => 'content_63f5f6a28e6712_57329318',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8528fb6c18ba7cdd18b804b6c8532abef85b7845' => 
     array (
       0 => '/home/bloodyclaw/projects/online_store/views/default/product_main.tpl',
-      1 => 1676549023,
+      1 => 1677063832,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63ee1bcec18c39_35510338 (Smarty_Internal_Template $_smarty_tpl) {
-?> <main>
-            <div class="container">
+function content_63f5f6a28e6712_57329318 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+ <main>
+            <div  class="container">
                 <ul class="breadcrumps-list">
                     <li class="breadcrumps-item">
-                        <a class="breadcrumps-link" href="/category.php?category=<?php echo $_smarty_tpl->tpl_vars['category']->value;?>
+                        <a class="breadcrumps-link" href="/category.php?category=<?php echo $_smarty_tpl->tpl_vars['category_id']->value;?>
 ">
                             <span property="name"><?php echo $_smarty_tpl->tpl_vars['category']->value;?>
 </span>
@@ -48,13 +49,31 @@ function content_63ee1bcec18c39_35510338 (Smarty_Internal_Template $_smarty_tpl)
 </p>
                     </div>
                     <div class="product_pay_container">
-                        <form class="product_pay-form" action="add">
+                        <form id="form" class="product_pay-form" action="add">
+                            
                             <span class="price"><?php echo $_smarty_tpl->tpl_vars['price']->value;?>
- </span><br>
-                            <button class="pay-button">Добавить в корзину</button><br>
+ руб.</span><br>
+                                        
+                            <div id="modification_cart" class="modification_cart">
+                        
+                                 <a id="modify_cart_remove" class="modify_cart_remove" onClick="addToCart(<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+); return false;"></a>
+                                 <span id="count_cart" class="count_cart">1</span>
+                                 <a id="modify_cart_add" class="modify_cart_add" onClick="addToCart(<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+); return false;"></a>
+                            </div>
+                            <a id="addCart" href="#" onClick="addToCart(<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+); return false;" class="pay-button">Добавить в корзину
+        
+                            </a><br>
                         </form>
                     </div>
                 </div>
             </div>
-        </main>          <?php }
+        </main>          
+<?php echo '<script'; ?>
+>changeCartContainer(<?php echo $_smarty_tpl->tpl_vars['quantity']->value;?>
+);<?php echo '</script'; ?>
+>
+<?php }
 }

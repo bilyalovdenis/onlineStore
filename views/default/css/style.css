@@ -145,6 +145,7 @@ header .category{
     background-image: url(../../../images/category.svg);
     background-size: 20% auto;
     background-position: 4% 50%;
+    color: black;
 }
 /* Search */
 header .search-li{
@@ -215,7 +216,7 @@ main {
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
-    /* padding-bottom: 150px; */
+    padding-bottom: 150px;
 }
 main .container::after{
     content: ".";
@@ -332,9 +333,12 @@ main .price{
     font-family: Arial, Helvetica, sans-serif;
 }
 main .pay-button{
+    display: block;
     margin-top: 18px;
     width: 200px;
     height: 35px;
+    padding-top: 10px;
+    text-align: center;
 
     border:none;
     border-radius: 5px;
@@ -345,12 +349,62 @@ main .pay-button{
 
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-
+    text-decoration: none;
     cursor: pointer;
+    color: black;
 }
 main .pay-button:active{
+    color: black;
     box-shadow: 2px 2px 2px -2px grey inset,
     -2px 2px 2px -2px grey inset;
+}
+main .pay-button:visited{
+    color: black;
+}
+
+main .modification_cart{
+    display: flex;
+    /* display: none; */
+    align-items: center;
+    margin-top: 18px;
+    width: 200px;
+    height: 35px;
+
+    /* background-color: red; */
+}
+main .modification_cart a{
+    display: inline-flex;
+    width: 75px;
+    height: 35px;
+
+    border:none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px -2px grey,
+    -2px 2px 3px -2px grey;
+
+    background-color: #EDFAF5;
+
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position:50%, 50% ;
+}
+main .modification_cart a:active{
+    color: black;
+    box-shadow: 2px 2px 2px -2px grey inset,
+    -2px 2px 2px -2px grey inset;
+}
+main .modify_cart_remove{
+    background-image: url(../../../images/minus.svg);
+}
+main .count_cart{
+    margin: 0 10px;
+    width: 35px;
+    font-size: 20px;
+    text-align: center;
+    white-space: nowrap;
+}
+main .modify_cart_add{
+    background-image: url(../../../images/plus.svg);
 }
 /* Footer */
 footer{
@@ -427,6 +481,7 @@ main .category-product-a{
     text-decoration: none;
     width: 100%;
     height: 100%;
+    color: black;
 }
 main .category-product-a:visited{
     color: black;

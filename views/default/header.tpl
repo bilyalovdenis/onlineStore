@@ -20,6 +20,7 @@
                 <a class="cart-a" href="/" title="Корзина">
                     Корзина
                 </a>
+                <span></span>
             </li>
             <li class="login-li">
                 <a class="login-a" href="/" title="Войти">

@@ -1,7 +1,11 @@
 <?php
 
 include_once('models/ProductModel.php');
-function indexAction($smarty){             
+include_once('models/CategoriesModel.php');
+include_once('library/CookieManager.php');
+function indexAction($smarty){ 
+    CookieManager::Instance()->verify_cookie();
+
     $itemCategory = isset($_GET['category']) ? $_GET['category'] : null;
     if ($itemCategory == null){
         $smarty->assign('error', "ОШИБКА! Укажите категорию товара");
@@ -14,9 +18,10 @@ function indexAction($smarty){
         }else{
             $view = 'category';
             //TODO Переделать массив в ассоциативный для более визуально понятного доступа
+            $categoryName = getCategoryNameById($itemCategory);
+            $info[0]['category'] = $categoryName['name'];
             $smarty->assign('products',$info);
         }
     }
-    // d($info[0],0);
     loadTemplate($smarty, $view);
 }

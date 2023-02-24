@@ -2,8 +2,13 @@
 
 include_once('models/ProductModel');
 include_once('models/DBModel');
+include_once('library/CookieManager.php');
 function indexAction($smarty){
-    $info = getTableColumnByName("product");
+    CookieManager::Instance()->verify_cookie();
+
+    // $info = getTableColumnByName("product");
+    $info = getTableColumnByName("cart_item");
+    // $info = getTableColumnByName("shopping_session");
     if(!empty($_POST)){
         // d($_POST, 0);
 

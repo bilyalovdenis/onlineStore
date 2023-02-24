@@ -1,8 +1,9 @@
+
  <main>
-            <div class="container">
+            <div  class="container">
                 <ul class="breadcrumps-list">
                     <li class="breadcrumps-item">
-                        <a class="breadcrumps-link" href="/category.php?category={$category}">
+                        <a class="breadcrumps-link" href="/category.php?category={$category_id}">
                             <span property="name">{$category}</span>
                         </a>
                     </li>
@@ -20,11 +21,22 @@
                         <p class="main-p-product_description">{$description}</p>
                     </div>
                     <div class="product_pay_container">
-                        <form class="product_pay-form" action="add">
-                            <span class="price">{$price} </span><br>
-                            <button class="pay-button">Добавить в корзину</button><br>
+                        <form id="form" class="product_pay-form" action="add">
+                            
+                            <span class="price">{$price} руб.</span><br>
+                                        
+                            <div id="modification_cart" class="modification_cart">
+                        
+                                 <a id="modify_cart_remove" class="modify_cart_remove" onClick="addToCart({$id}); return false;"></a>
+                                 <span id="count_cart" class="count_cart">1</span>
+                                 <a id="modify_cart_add" class="modify_cart_add" onClick="addToCart({$id}); return false;"></a>
+                            </div>
+                            <a id="addCart" href="#" onClick="addToCart({$id}); return false;" class="pay-button">Добавить в корзину
+        
+                            </a><br>
                         </form>
                     </div>
                 </div>
             </div>
         </main>          
+<script>changeCartContainer({$quantity});</script>

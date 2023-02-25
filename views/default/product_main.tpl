@@ -26,10 +26,10 @@
                             <span class="price">{$price} руб.</span><br>
                                         
                             <div id="modification_cart" class="modification_cart">
-                        
-                                 <a id="modify_cart_remove" class="modify_cart_remove" onClick="addToCart({$id}); return false;"></a>
+                                 <a id="modify_cart_remove" class="modify_cart_remove" onClick="removeFromCart({$id}); return false;"></a>
                                  <span id="count_cart" class="count_cart">1</span>
                                  <a id="modify_cart_add" class="modify_cart_add" onClick="addToCart({$id}); return false;"></a>
+                                 <a id="modify_cart_delete" class="modify_cart_delete" onClick="deleteCartItem({$id}) ;return false;"></a>
                             </div>
                             <a id="addCart" href="#" onClick="addToCart({$id}); return false;" class="pay-button">Добавить в корзину
         

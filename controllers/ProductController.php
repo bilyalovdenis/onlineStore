@@ -22,8 +22,7 @@ function indexAction($smarty){
         }else{
             $view = 'product';
             $categoryName = getCategoryNameById($info['category']);
-            $quantity = getCountCartItemBySession($itemId, $_COOKIE['shopping_session_id']);
-            // d($quantity, 0);
+            $quantity = getCartItemByProductAndSession($itemId, $_COOKIE['shopping_session_id']);
             $smarty->assign('id',"$info[id]");
             $smarty->assign('name',"$info[name]");
             $smarty->assign('description',"$info[description]");

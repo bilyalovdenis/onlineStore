@@ -17,7 +17,7 @@
                 </form>
             </li>
             <li class="cart-li">
-                <a class="cart-a" href="/" title="Корзина">
+                <a class="cart-a" href="/cart.php?cart=index" title="Корзина">
                     Корзина
                 </a>
                 <span></span>

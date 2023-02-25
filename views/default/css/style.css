@@ -30,6 +30,9 @@ header{
 
     box-shadow:1px 0 3px grey;
 }
+header a{
+    color: black;
+}
 header .main{
     position: relative;
     margin: 0 auto;
@@ -85,7 +88,6 @@ header .hr{
 
     margin: 0;
     margin-top: 10px;
-
     color: #4FB1A1;
     size: 2;
 }
@@ -387,6 +389,8 @@ main .modification_cart a{
     background-repeat: no-repeat;
     background-size: 40%;
     background-position:50%, 50% ;
+
+    cursor: pointer;
 }
 main .modification_cart a:active{
     color: black;
@@ -405,6 +409,10 @@ main .count_cart{
 }
 main .modify_cart_add{
     background-image: url(../../../images/plus.svg);
+}
+main .modify_cart_delete{
+    margin-left: 20px;
+    background-image: url(../../../images/trash.svg);
 }
 /* Footer */
 footer{
@@ -506,4 +514,80 @@ main .category-product-price{
     margin-top: 10px;
     width: 100%;
     text-align: center;
+}
+
+/* CART */
+
+main .container_cart_items{
+    padding-left: 20px;
+    width: 70%;
+}
+main .cart_item{
+    /* background-color: blue; */
+    width: 100%;
+    height: 120px;
+}
+main .cart_item_photo-a{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+main .cart_item_photo-img{
+    width: 100%;
+    height: 100%;
+}
+main .cart_item_product_name_price{
+    display: inline-block;
+    vertical-align: top;
+    width: 500px;
+    height: 100%;
+
+    margin-left: 5px;
+}
+main .cart_item_product_name{
+    margin-top: 0px;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+main .cart_item_product_description{
+    width: 100%;
+    height: 70px;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    margin-top: 5px;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+main .delete_cart_item{
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+main .delete_cart_item:hover{
+    text-decoration: none;
+}
+main .delete_cart_item{
+    color:black;
+}
+main .cart_hr{
+    color: #4FB1A1;
+}
+main .cart_item_modification_cart{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    height: 100%;
+    width: 220px;
+    margin-top: 0px;
+}
+main .cart_item_modification_cart .modification_cart{
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+main .price_cart{
+    display: block;
+    text-align: center;
+    margin-top: 5px;
 }

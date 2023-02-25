@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-02-22 14:04:02
+/* Smarty version 4.2.1, created on 2023-02-25 12:23:23
   from '/home/bloodyclaw/projects/online_store/views/default/product_main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63f5f6a28e6712_57329318',
+  'unifunc' => 'content_63f9d38b2761a7_62256582',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8528fb6c18ba7cdd18b804b6c8532abef85b7845' => 
     array (
       0 => '/home/bloodyclaw/projects/online_store/views/default/product_main.tpl',
-      1 => 1677063832,
+      1 => 1677316998,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63f5f6a28e6712_57329318 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63f9d38b2761a7_62256582 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
  <main>
             <div  class="container">
@@ -55,12 +55,13 @@ function content_63f5f6a28e6712_57329318 (Smarty_Internal_Template $_smarty_tpl)
  руб.</span><br>
                                         
                             <div id="modification_cart" class="modification_cart">
-                        
-                                 <a id="modify_cart_remove" class="modify_cart_remove" onClick="addToCart(<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+                                 <a id="modify_cart_remove" class="modify_cart_remove" onClick="removeFromCart(<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 ); return false;"></a>
                                  <span id="count_cart" class="count_cart">1</span>
                                  <a id="modify_cart_add" class="modify_cart_add" onClick="addToCart(<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 ); return false;"></a>
+                                 <a id="modify_cart_delete" class="modify_cart_delete" onClick="deleteCartItem(<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+) ;return false;"></a>
                             </div>
                             <a id="addCart" href="#" onClick="addToCart(<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 ); return false;" class="pay-button">Добавить в корзину

@@ -1,7 +1,3 @@
-<main>
-
-<h2 class="category-h2">{$products[0]['category']}</h2>
-<ul class="category-clearfix">
 {foreach from=$products item=product}
     <li class="category-product_wrapper">
         <div class="category-product">
@@ -16,9 +12,3 @@
         </div>
     </li>
 {/foreach}
-</ul>
-<script src="./views/default/js/uploading_content.js"></script> 
-<div id="showmore-triger" data-page="1" data-max="{$products[0]['max_pages']}">
-	<img src="../images/load.gif" alt="">
-</div>
-</main>

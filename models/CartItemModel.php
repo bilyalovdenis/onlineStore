@@ -83,3 +83,11 @@ function getCartItemByProductAndSession($productId, $sessionId){
     $connect->close();
     return $res;  
 }
+function mergeSession($main_session, $old_session){
+    $db_config = get_db_congig();                
+    $connect = new mysqli($db_config["db_host"], $db_config["db_user"],
+                          $db_config["db_pass"], $db_config["db_name"]);                  
+    $sql = "UPDATE cart_item SET session_id=? WHERE session_id=?";                    
+    prepared_query($connect, $sql, [$main_session, $old_session]);
+    $connect->close(); 
+}

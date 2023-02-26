@@ -3,9 +3,7 @@
 include_once('config.php');
 include_once('library/mainFunctions.php');
 
-// if($_GET['cart']=='add'){
-//     loadPage($smarty, 'Cart', 'addToCart');
-// }
+session_start();
 switch($_GET['cart']){
     case 'add':
         loadPage($smarty, 'Cart', 'addToCart');

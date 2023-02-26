@@ -203,7 +203,7 @@ header .login-li{
     position: relative;
     right: 10px;
     float: right;
-    width: 90px;
+    width: 100px;
 }
 header .login-a{
     
@@ -211,12 +211,15 @@ header .login-a{
     background-size: 25% auto;
     background-position: 7% 60%;
 }
+header .logout-a{
+    background-image: none;
+}
 
 /* Main */
 
 main {
     max-width: 1200px;
-    height: 100%;
+    min-height: 100%;
     margin: 0 auto;
     padding-bottom: 150px;
 }
@@ -228,6 +231,7 @@ main .container::after{
 	clear: both;
 	visibility: hidden;
 }
+
 main .container{display: inline-block;}
 /* Hides from IE-mac \*/
 * html main .container { height: 1%;}
@@ -383,6 +387,7 @@ main .modification_cart a{
     border-radius: 5px;
     box-shadow: 2px 2px 3px -2px grey,
     -2px 2px 3px -2px grey;
+    
 
     background-color: #EDFAF5;
 
@@ -417,8 +422,6 @@ main .modify_cart_delete{
 /* Footer */
 footer{
 
-    position: relative;
-    margin-top: -150px;
     width: 100%;
     height: 150px;
     
@@ -458,6 +461,7 @@ main .category-h2{
     margin-left: 10px;
 }
 main .category-clearfix{
+    overflow: hidden;
     list-style: none;
     margin: 20px 0 0 -10px;
     /* padding: 0; */
@@ -514,6 +518,10 @@ main .category-product-price{
     margin-top: 10px;
     width: 100%;
     text-align: center;
+}
+
+#showmore-triger {
+	text-align: center;
 }
 
 /* CART */
@@ -590,4 +598,128 @@ main .price_cart{
     display: block;
     text-align: center;
     margin-top: 5px;
+}
+
+/* FORM_WRAPPER */
+
+.form_wrapper{
+    position: fixed;
+    margin-top: 10px;
+    text-align: center;
+    z-index: 1147483647;
+    display: none;
+    width   : 100%;
+}	
+.wrapper_hider{
+    position: absolute;
+    background-color: #000;
+    opacity: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 1147483646;
+    display: none;
+}
+.form_wrapper .wrapper_head{
+    padding: 10px 0;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #4FB1A1;
+    color:black;
+    font-size:25px;
+    border-bottom:1px solid #ddd;
+    border-radius: 5px 5px 0px 0px;
+    
+}
+.form_wrapper .wrapper_h{
+    margin-left: 25px;
+    /* display: inline-block; */
+}
+.form_wrapper .wrapper_close{
+    display: flex;
+    margin-right: 10px;
+    float: right;
+    width: 20px;
+    height: 20px;
+    background-image:url(../../../images/close.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+}
+.form_wrapper form{
+    margin: 0 auto;
+    display:none;
+    background:#EDFAF5;
+}
+form.active{
+    display:block;
+}	
+.login{
+    width:350px;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px -2px grey,
+    -2px 2px 3px -2px grey;
+}
+.registration{
+    width:450px;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px -2px grey,
+    -2px 2px 3px -2px grey;
+}
+.form_wrapper .column{
+    width:67%;
+    margin: 0 auto;
+    /* float: ; */
+}
+.form_wrapper a{
+    text-decoration:none;
+    color:#777;
+    font-size:12px;
+}
+.form_wrapper a:hover{
+    color:#000;
+}
+.form_wrapper label{
+    display:block;
+    padding:10px 30px 0px 30px;
+    margin:10px 0px 0px 0px;
+} 
+.form_wrapper .bottom{
+    margin-top:20px;
+}
+.form_wrapper .bottom a{
+    font-size: 15px;
+    display:block;
+    padding:10px;
+    text-align:center;
+    color: #4FB1A1;
+}
+.form_wrapper .bottom a:hover{
+    color:#000;
+}
+.form_wrapper input[type="submit"] {
+    border:none;
+    border-radius: 5px;
+    background-color: #4FB1A1;;
+    box-shadow: 2px 2px 3px -2px grey,
+    -2px 2px 3px -2px grey;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 0 9px;
+    text-align: center;
+    width: 150px;
+    cursor:pointer;
+}
+.form_wrapper input[type="submit"]:hover {
+    color: black;
+    background-color: #58c5b3;;
+    box-shadow: 2px 2px 2px -2px grey inset,
+    -2px 2px 2px -2px grey inset;
+}
+.form_wrapper .error{
+    font-size: 14;
+    color: red;
+    display: none;
 }

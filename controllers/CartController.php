@@ -3,11 +3,16 @@
 include_once('models/ProductModel.php');
 include_once('models/CartItemModel.php');
 include_once('library/CookieManager.php');
+include_once('library/SessionManager.php');
 
 function indexAction($smarty){       
     CookieManager::Instance()->verify_cookie();
     $view = 'cart';
-
+    if(isset($_SESSION['user'])){
+        $smarty->assign('session_user', $_SESSION['user']);
+    }else{
+        $smarty->assign('session_user', 'false');
+    }
     $res = getCartItemsBySession($_COOKIE['shopping_session_id']);
     foreach($res as &$elem){
         $product = getProductById($elem['product_id']);

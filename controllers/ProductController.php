@@ -4,11 +4,17 @@ include_once('models/ProductModel.php');
 include_once('models/CategoriesModel.php');
 include_once('models/CartItemModel.php');
 include_once('library/CookieManager.php');
+include_once('library/SessionManager.php');
 function testAction(){
     echo 'ProductController.php > testAction';
 }
 function indexAction($smarty){
     CookieManager::Instance()->verify_cookie();
+    if(isset($_SESSION['user'])){
+        $smarty->assign('session_user', $_SESSION['user']);
+    }else{
+        $smarty->assign('session_user', 'false');
+    }
 
     $itemId = isset($_GET['id']) ? $_GET['id'] : null;
     if ($itemId == null){

@@ -8,7 +8,6 @@ function loadPage($smarty, $controllerName, $actionName = 'index'){
 function loadTemplate($smarty, $templateName){
     $smarty->display(TemplatePrefix.$templateName.TemplatePostfix);
 }
-
 function prepared_query($my_sql, $sql, $params, $types = ""){
     $types = $types ?: str_repeat("s", count($params));
     $stmt = $my_sql->prepare($sql);
